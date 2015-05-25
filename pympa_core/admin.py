@@ -11,7 +11,7 @@ RANGE_VALIDITA_SECTION = ('Range di validità',
 
 
 @admin.register(Organization)
-class EnteAdmin(admin.ModelAdmin):
+class OrganizationAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {'fields': ('title', 'ente_padre')}),
         RANGE_VALIDITA_SECTION)

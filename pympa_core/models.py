@@ -8,7 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from model_utils.models import TimeStampedModel
 
-from .managers import RangeValiditaManager
+from .managers import ValidityDateTimeRangeManager
 
 
 class ValidityDateTimeRangeModel(models.Model):
@@ -17,7 +17,7 @@ class ValidityDateTimeRangeModel(models.Model):
     validity_end = models.DateTimeField(
         verbose_name=_('data fine validita'), blank=True, null=True)
 
-    objects = RangeValiditaManager()
+    objects = ValidityDateTimeRangeManager()
 
     class Meta:
         abstract = True

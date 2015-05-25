@@ -5,11 +5,9 @@ from django.db.models import Manager, Q
 from django.utils.timezone import now
 
 
-class RangeValiditaManager(Manager):
+class ValidityDateTimeRangeManager(Manager):
 
-    # def validi_tra(self, validity_start, validity_end=None):
-
-    def validi(self):
+    def valid(self):
         return self.filter(
-            Q(inizio_validita__lte=now()),
-            Q(fine_validita__gte=now()) | Q(fine_validita__isnull=True),)
+            Q(validity_start__lte=now()),
+            Q(validity_end__gte=now()) | Q(validity_end__isnull=True),)
