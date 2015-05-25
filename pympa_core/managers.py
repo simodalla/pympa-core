@@ -7,7 +7,7 @@ from django.utils.timezone import now
 
 class RangeValiditaManager(Manager):
 
-    # def validi_tra(self, inizio_validita, fine_validita=None):
+    # def validi_tra(self, validity_start, validity_end=None):
 
     def validi(self):
         return self.filter(
