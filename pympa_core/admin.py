@@ -13,11 +13,11 @@ RANGE_VALIDITA_SECTION = ('Range di validità',
 @admin.register(Organization)
 class OrganizationAdmin(admin.ModelAdmin):
     fieldsets = (
-        (None, {'fields': ('title', 'ente_padre')}),
+        (None, {'fields': ('title', 'parent')}),
         RANGE_VALIDITA_SECTION)
-    list_display = ('title', 'ente_padre')
+    list_display = ('title', 'parent')
 
 
 @admin.register(Office)
 class OfficeAdmin(admin.ModelAdmin):
-    list_display = ('title', 'organization', 'indirizzo_verboso')
+    list_display = ('title', 'organization', 'verbose_address')

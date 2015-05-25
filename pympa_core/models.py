@@ -13,9 +13,9 @@ from .managers import ValidityDateTimeRangeManager
 
 class ValidityDateTimeRangeModel(models.Model):
     validity_start = models.DateTimeField(
-        verbose_name=_('data inizio validita'), default=timezone.now)
+        verbose_name=_('validity start'), default=timezone.now)
     validity_end = models.DateTimeField(
-        verbose_name=_('data fine validita'), blank=True, null=True)
+        verbose_name=_('validity end'), blank=True, null=True)
 
     objects = ValidityDateTimeRangeManager()
 
@@ -39,8 +39,8 @@ class Organization(TimeStampedModel, ValidityDateTimeRangeModel):
                                verbose_name=_('parent organization'))
 
     class Meta:
-        verbose_name = _('Organization')
-        verbose_name_plural = _('Organizations')
+        verbose_name = _('organization')
+        verbose_name_plural = _('organizations')
 
     def __str__(self):
         return '{}'.format(self.title)
@@ -55,8 +55,8 @@ class Office(TimeStampedModel, ValidityDateTimeRangeModel):
                                        verbose_name='verbose address')
 
     class Meta:
-        verbose_name = _('Sede')
-        verbose_name_plural = _('Sedi')
+        verbose_name = _('office')
+        verbose_name_plural = _('offices')
 
     def __str__(self):
         return '{}'.format(self.title)
