@@ -21,3 +21,7 @@ class OrganizationAdmin(admin.ModelAdmin):
 @admin.register(Office)
 class OfficeAdmin(admin.ModelAdmin):
     list_display = ('title', 'organization', 'verbose_address')
+
+
+admin.site.register(Organization, OrganizationAdmin)
+admin.site.register(Office, OfficeAdmin)

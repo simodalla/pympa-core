@@ -6,4 +6,4 @@ from django.apps import AppConfig
 
 class PympaCoreConfig(AppConfig):
     name = 'pympa_core'
-    verbose_name = 'Pympa Oggetti Generici'
+    verbose_name = 'Oggetti Generici'
