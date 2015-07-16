@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-25 12:48+0200\n"
+"POT-Creation-Date: 2015-07-16 16:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr "titolo"
 msgid "parent organization"
 msgstr "organizzazione padre"
 
-#: models.py:42
+#: models.py:42 models.py:54
 msgid "organization"
 msgstr "organizzazione"
 
@@ -42,10 +42,14 @@ msgstr "organizzazione"
 msgid "organizations"
 msgstr "organizzazioni"
 
-#: models.py:58
-msgid "office"
-msgstr "sed"
+#: models.py:56
+msgid "verbose address"
+msgstr "indirizzo"
 
 #: models.py:59
+msgid "office"
+msgstr "sede"
+
+#: models.py:60
 msgid "offices"
 msgstr "sedi"

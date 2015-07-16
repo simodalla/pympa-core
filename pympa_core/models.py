@@ -49,10 +49,12 @@ class Organization(TimeStampedModel, ValidityDateTimeRangeModel):
 @python_2_unicode_compatible
 class Office(TimeStampedModel, ValidityDateTimeRangeModel):
     """Sede"""
-    title = models.CharField(max_length=200, unique=True)
-    organization = models.ForeignKey(Organization)
+    title = models.CharField(max_length=200, unique=True,
+                             verbose_name=_('title'))
+    organization = models.ForeignKey(Organization,
+                                     verbose_name=_('organization'))
     verbose_address = models.TextField(blank=True,
-                                       verbose_name='verbose address')
+                                       verbose_name=_('verbose address'))
 
     class Meta:
         verbose_name = _('office')
